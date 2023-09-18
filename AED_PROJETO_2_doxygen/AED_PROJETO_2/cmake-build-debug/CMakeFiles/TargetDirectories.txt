@@ -1,0 +1,3 @@
+C:/Users/ninja/OneDrive/ProjetoAEDfinal2/AED_PROJETO_2_doxygen/AED_PROJETO_2/cmake-build-debug/CMakeFiles/AED_PROJETO_2.dir
+C:/Users/ninja/OneDrive/ProjetoAEDfinal2/AED_PROJETO_2_doxygen/AED_PROJETO_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ninja/OneDrive/ProjetoAEDfinal2/AED_PROJETO_2_doxygen/AED_PROJETO_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

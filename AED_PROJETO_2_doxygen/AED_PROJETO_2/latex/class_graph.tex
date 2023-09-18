@@ -1,0 +1,252 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_graph_1_1_edge}{Edge}}
+\begin{DoxyCompactList}\small\item\em Struct que representa uma aresta do grafo Contém o vértice de destino, o peso da aresta e um set de companhias aéreas que realizam voos nessa aresta. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_graph_1_1_node}{Node}}
+\begin{DoxyCompactList}\small\item\em Struct que representa um node do grafo Contém uma lista de arestas que saem desse node um booleano que indica se o node já foi visitado um inteiro que indica a distância do node ao node de origem da pesquisa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}} ()
+\begin{DoxyCompactList}\small\item\em Complexidade O(1) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph_a284b99bdb07994225dee3c2cdb59c80a}{Graph}} (int nodes)
+\begin{DoxyCompactList}\small\item\em Complexidade O(1) Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_ae7f6cd2866b664779d52bbd9b40c0029}{add\+Edge}} (int src, int dest, string companhia, int weight=1)
+\item 
+\mbox{\Hypertarget{class_graph_a2cdd8a0ac4496e962588e03d3a2e8355}\label{class_graph_a2cdd8a0ac4496e962588e03d3a2e8355}} 
+vector$<$ int $>$ {\bfseries bfs\+\_\+me} (int origem, int destino)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_graph_a29ca1c9f594396633562b516ed4b2378}{bfs\+\_\+airlines}} (int origem, int destino, const set$<$ string $>$ \&companhias)
+\item 
+void \mbox{\hyperlink{class_graph_ab1c76c94aca76bb601ccc97d917e7d8f}{dfs\+\_\+art}} (int v, int index, vector$<$ int $>$ \&num, vector$<$ int $>$ \&low, stack$<$ int $>$ \&s, set$<$ int $>$ \&ap, bool first)
+\begin{DoxyCompactList}\small\item\em Complexidade O($\vert$\+V$\vert$+$\vert$\+E$\vert$) Função que realiza uma pesquisa em profundidade no grafo e retorna um set com os pontos de articulação. \end{DoxyCompactList}\item 
+set$<$ int $>$ \mbox{\hyperlink{class_graph_a1989c9e26e73c1268afac4123597e20c}{get\+Articulation\+Points}} ()
+\begin{DoxyCompactList}\small\item\em Complexidade O($\vert$\+V$\vert$+$\vert$\+E$\vert$) Função que retorna um set com os pontos de articulação. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_a47f6353e9610380f1bb1764bde815ddb}{dfs\+\_\+scc}} (int v, int index)
+\begin{DoxyCompactList}\small\item\em Complexidade O($\vert$\+V$\vert$+$\vert$\+E$\vert$) Função que realiza uma pesquisa em profundidade no grafo e retorna um inteiro com o número de componentes fortemente conexos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_af8c4d48bdddcafffe97a0bb3f1cdacfb}{dfs\+\_\+scc2}} (int v, int index, stack$<$ int $>$ $\ast$node\+\_\+stack, list$<$ list$<$ int $>$ $>$ $\ast$answer)
+\item 
+void \mbox{\hyperlink{class_graph_a505e1b5d6a42c2b1f80fda097ff65fd3}{bfs}} (int a)
+\begin{DoxyCompactList}\small\item\em Função que realiza uma pesquisa em largura no grafo Complexidade O($\vert$\+V$\vert$+$\vert$\+E$\vert$) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_a8b70f238842ac39f18f574f89dae8509}{diametro}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna o diâmetro do grafo Complexidade O($\vert$\+V$\vert$+$\vert$\+E$\vert$) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_ac04bd861e2ce0c03f71ea1444de4849a}{bfs\+\_\+max\+\_\+distance}} (int a)
+\begin{DoxyCompactList}\small\item\em Função que realiza uma pesquisa em largura no grafo e retorna a distância máxima entre um nó e os restantes nós Complexidade O($\vert$\+V$\vert$+$\vert$\+E$\vert$) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_a81a76a428e630453ef019a15b9092967}\label{class_graph_a81a76a428e630453ef019a15b9092967}} 
+int {\bfseries n}
+\item 
+\mbox{\Hypertarget{class_graph_a71b5e16eb9e0670fea3ecee3526abb41}\label{class_graph_a71b5e16eb9e0670fea3ecee3526abb41}} 
+vector$<$ \mbox{\hyperlink{struct_graph_1_1_node}{Node}} $>$ {\bfseries nodes}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}\label{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Complexidade O(1) 
+
+Default Constructor \mbox{\Hypertarget{class_graph_a284b99bdb07994225dee3c2cdb59c80a}\label{class_graph_a284b99bdb07994225dee3c2cdb59c80a}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{int}]{nodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Complexidade O(1) Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & Número de nós \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_ae7f6cd2866b664779d52bbd9b40c0029}\label{class_graph_ae7f6cd2866b664779d52bbd9b40c0029}} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{int}]{dest,  }\item[{string}]{companhia,  }\item[{int}]{weight = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief
+Complexidade O(|V|+|E|)
+Função que realiza uma pesquisa em largura no grafo e retorna um vetor com o caminho com menos escalas entre dois nós
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em origem} & Nó de origem \\
+\hline
+{\em destino} & Nó de destino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector com os caminhos com menos escalas realizadas entre o nó de origem e o nó de destino 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a505e1b5d6a42c2b1f80fda097ff65fd3}\label{class_graph_a505e1b5d6a42c2b1f80fda097ff65fd3}} 
+\index{Graph@{Graph}!bfs@{bfs}}
+\index{bfs@{bfs}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily void Graph\+::bfs (\begin{DoxyParamCaption}\item[{int}]{a }\end{DoxyParamCaption})}
+
+
+
+Função que realiza uma pesquisa em largura no grafo Complexidade O($\vert$\+V$\vert$+$\vert$\+E$\vert$) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Nó de origem \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a29ca1c9f594396633562b516ed4b2378}\label{class_graph_a29ca1c9f594396633562b516ed4b2378}} 
+\index{Graph@{Graph}!bfs\_airlines@{bfs\_airlines}}
+\index{bfs\_airlines@{bfs\_airlines}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{bfs\_airlines()}{bfs\_airlines()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Graph\+::bfs\+\_\+airlines (\begin{DoxyParamCaption}\item[{int}]{origem,  }\item[{int}]{destino,  }\item[{const set$<$ string $>$ \&}]{companhias }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief
+Complexidade O(|V|+|E|)
+Função que realiza uma pesquisa em largura no grafo e retorna um vetor com o caminho com menos escalas entre dois nós, passando por companhias aéreas específicas
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em origem} & Nó de origem \\
+\hline
+{\em destino} & Nó de destino \\
+\hline
+{\em companhias} & Set de companhias aéreas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector com os caminhos com menos escalas realizadas entre o nó de origem e o nó de destino 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_ac04bd861e2ce0c03f71ea1444de4849a}\label{class_graph_ac04bd861e2ce0c03f71ea1444de4849a}} 
+\index{Graph@{Graph}!bfs\_max\_distance@{bfs\_max\_distance}}
+\index{bfs\_max\_distance@{bfs\_max\_distance}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{bfs\_max\_distance()}{bfs\_max\_distance()}}
+{\footnotesize\ttfamily int Graph\+::bfs\+\_\+max\+\_\+distance (\begin{DoxyParamCaption}\item[{int}]{a }\end{DoxyParamCaption})}
+
+
+
+Função que realiza uma pesquisa em largura no grafo e retorna a distância máxima entre um nó e os restantes nós Complexidade O($\vert$\+V$\vert$+$\vert$\+E$\vert$) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Nó de origem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distância máxima entre um nó e os restantes nós 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_ab1c76c94aca76bb601ccc97d917e7d8f}\label{class_graph_ab1c76c94aca76bb601ccc97d917e7d8f}} 
+\index{Graph@{Graph}!dfs\_art@{dfs\_art}}
+\index{dfs\_art@{dfs\_art}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{dfs\_art()}{dfs\_art()}}
+{\footnotesize\ttfamily void Graph\+::dfs\+\_\+art (\begin{DoxyParamCaption}\item[{int}]{v,  }\item[{int}]{index,  }\item[{vector$<$ int $>$ \&}]{num,  }\item[{vector$<$ int $>$ \&}]{low,  }\item[{stack$<$ int $>$ \&}]{s,  }\item[{set$<$ int $>$ \&}]{ap,  }\item[{bool}]{first }\end{DoxyParamCaption})}
+
+
+
+Complexidade O($\vert$\+V$\vert$+$\vert$\+E$\vert$) Função que realiza uma pesquisa em profundidade no grafo e retorna um set com os pontos de articulação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Nó de origem \\
+\hline
+{\em index} & Número de nós visitados \\
+\hline
+{\em num} & Vector com o número de nós visitados \\
+\hline
+{\em low} & Vector com o menor número de nós visitados \\
+\hline
+{\em s} & Stack com os nós visitados \\
+\hline
+{\em ap} & Set com os nós de articulação \\
+\hline
+{\em first} & Booleano que indica se é a primeira chamada à função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a47f6353e9610380f1bb1764bde815ddb}\label{class_graph_a47f6353e9610380f1bb1764bde815ddb}} 
+\index{Graph@{Graph}!dfs\_scc@{dfs\_scc}}
+\index{dfs\_scc@{dfs\_scc}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{dfs\_scc()}{dfs\_scc()}}
+{\footnotesize\ttfamily int Graph\+::dfs\+\_\+scc (\begin{DoxyParamCaption}\item[{int}]{v,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Complexidade O($\vert$\+V$\vert$+$\vert$\+E$\vert$) Função que realiza uma pesquisa em profundidade no grafo e retorna um inteiro com o número de componentes fortemente conexos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Nó de origem \\
+\hline
+{\em index} & Número de nós visitados \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Número de componentes fortemente conexos 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_af8c4d48bdddcafffe97a0bb3f1cdacfb}\label{class_graph_af8c4d48bdddcafffe97a0bb3f1cdacfb}} 
+\index{Graph@{Graph}!dfs\_scc2@{dfs\_scc2}}
+\index{dfs\_scc2@{dfs\_scc2}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{dfs\_scc2()}{dfs\_scc2()}}
+{\footnotesize\ttfamily void Graph\+::dfs\+\_\+scc2 (\begin{DoxyParamCaption}\item[{int}]{v,  }\item[{int}]{index,  }\item[{stack$<$ int $>$ $\ast$}]{node\+\_\+stack,  }\item[{list$<$ list$<$ int $>$ $>$ $\ast$}]{answer }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} @brief
+ Complexidade O(|V|+|E|)
+ Função que realiza uma pesquisa em profundidade no grafo e retorna um inteiro com o número de componentes fortemente conexos
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em v} & Nó de origem \\
+\hline
+{\em index} & Número de nós visitados \\
+\hline
+{\em node\+\_\+stack} & Stack com os nós visitados \\
+\hline
+{\em answer} & Lista de listas com os nós visitados \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a8b70f238842ac39f18f574f89dae8509}\label{class_graph_a8b70f238842ac39f18f574f89dae8509}} 
+\index{Graph@{Graph}!diametro@{diametro}}
+\index{diametro@{diametro}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{diametro()}{diametro()}}
+{\footnotesize\ttfamily int Graph\+::diametro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o diâmetro do grafo Complexidade O($\vert$\+V$\vert$+$\vert$\+E$\vert$) 
+
+\begin{DoxyReturn}{Returns}
+Diâmetro do grafo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a1989c9e26e73c1268afac4123597e20c}\label{class_graph_a1989c9e26e73c1268afac4123597e20c}} 
+\index{Graph@{Graph}!getArticulationPoints@{getArticulationPoints}}
+\index{getArticulationPoints@{getArticulationPoints}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getArticulationPoints()}{getArticulationPoints()}}
+{\footnotesize\ttfamily set$<$ int $>$ Graph\+::get\+Articulation\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Complexidade O($\vert$\+V$\vert$+$\vert$\+E$\vert$) Função que retorna um set com os pontos de articulação. 
+
+\begin{DoxyReturn}{Returns}
+Set com os pontos de articulação 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_graph_8h}{Graph.\+h}}\item 
+\mbox{\hyperlink{_graph_8cpp}{Graph.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,55 @@
+\hypertarget{_graph_8h_source}{}\doxysection{Graph.\+h}
+\mbox{\hyperlink{_graph_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef AED\_PROJETO\_2\_GRAPH\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define AED\_PROJETO\_2\_GRAPH\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{19 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_graph}{Graph}} \{}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_graph_1_1_edge}{Edge}} \{}
+\DoxyCodeLine{29         \textcolor{keywordtype}{int} dest;   \textcolor{comment}{// Destination node}}
+\DoxyCodeLine{30         \textcolor{keywordtype}{int} weight; \textcolor{comment}{// An integer weight}}
+\DoxyCodeLine{31         set<string> airlines;}
+\DoxyCodeLine{32     \};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{42     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_graph_1_1_node}{Node}} \{}
+\DoxyCodeLine{43         list<Edge> adj; \textcolor{comment}{// The list of outgoing edges (to adjacent nodes)}}
+\DoxyCodeLine{44         \textcolor{keywordtype}{bool} visited;   \textcolor{comment}{// As the node been visited on a search?}}
+\DoxyCodeLine{45         \textcolor{keywordtype}{int} distance;}
+\DoxyCodeLine{46         \textcolor{keywordtype}{bool} in\_stack;}
+\DoxyCodeLine{47         \textcolor{keywordtype}{int} num;}
+\DoxyCodeLine{48         \textcolor{keywordtype}{int} low;}
+\DoxyCodeLine{49     \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     vector<Node> nodes;}
+\DoxyCodeLine{58     \mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}}();}
+\DoxyCodeLine{65     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}}(\textcolor{keywordtype}{int} nodes);}
+\DoxyCodeLine{76     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ae7f6cd2866b664779d52bbd9b40c0029}{addEdge}}(\textcolor{keywordtype}{int} src, \textcolor{keywordtype}{int} dest, \textcolor{keywordtype}{string} companhia, \textcolor{keywordtype}{int} weight = 1);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     vector<int> bfs\_me(\textcolor{keywordtype}{int} origem, \textcolor{keywordtype}{int} destino);}
+\DoxyCodeLine{89     vector<int> \mbox{\hyperlink{class_graph_a29ca1c9f594396633562b516ed4b2378}{bfs\_airlines}}(\textcolor{keywordtype}{int} origem, \textcolor{keywordtype}{int} destino, \textcolor{keyword}{const} set<string>\& companhias);}
+\DoxyCodeLine{103     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ab1c76c94aca76bb601ccc97d917e7d8f}{dfs\_art}}(\textcolor{keywordtype}{int} v, \textcolor{keywordtype}{int} index, vector<int>\& num, vector<int>\& low, stack<int>\& s, set<int>\& ap, \textcolor{keywordtype}{bool} first);}
+\DoxyCodeLine{111     set<int> \mbox{\hyperlink{class_graph_a1989c9e26e73c1268afac4123597e20c}{getArticulationPoints}}();}
+\DoxyCodeLine{120     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_a47f6353e9610380f1bb1764bde815ddb}{dfs\_scc}}(\textcolor{keywordtype}{int} v, \textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{131     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_af8c4d48bdddcafffe97a0bb3f1cdacfb}{dfs\_scc2}}(\textcolor{keywordtype}{int} v, \textcolor{keywordtype}{int} index, stack<int> *node\_stack, list<list<int>> *answer);}
+\DoxyCodeLine{138     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a505e1b5d6a42c2b1f80fda097ff65fd3}{bfs}}(\textcolor{keywordtype}{int} a);}
+\DoxyCodeLine{145     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_a8b70f238842ac39f18f574f89dae8509}{diametro}}();}
+\DoxyCodeLine{155     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_ac04bd861e2ce0c03f71ea1444de4849a}{bfs\_max\_distance}}(\textcolor{keywordtype}{int} a);}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157 \};}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//AED\_PROJETO\_2\_GRAPH\_H}}
+
+\end{DoxyCode}

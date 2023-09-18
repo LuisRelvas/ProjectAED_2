@@ -1,0 +1,232 @@
+\hypertarget{class_gestor}{}\doxysection{Gestor Class Reference}
+\label{class_gestor}\index{Gestor@{Gestor}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gestor_ac5407660e04225635be3e71fa1d51247}\label{class_gestor_ac5407660e04225635be3e71fa1d51247}} 
+void {\bfseries Gestor\+\_\+\+Airports} ()
+\begin{DoxyCompactList}\small\item\em Função que lê os aeroportos do ficheiro \textquotesingle{}airports.\+csv\textquotesingle{} e os guarda no vetor de aeroportos Complexidade\+: O(n) onde n é o número de aeroportos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gestor_a0003b9fad20add3ad5861d00c45747af}\label{class_gestor_a0003b9fad20add3ad5861d00c45747af}} 
+void {\bfseries Gestor\+\_\+\+Airlines} ()
+\begin{DoxyCompactList}\small\item\em Função que lê as companhias aéreas do ficheiro \textquotesingle{}airlines.\+csv\textquotesingle{} e as guarda no vetor de companhias aéreas Complexidade\+: O(n) onde n é o número de companhias aéreas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestor_a3d47b6f028e380c1e3c0d319d0fdae31}{Gestor\+\_\+\+Flights}} (\mbox{\hyperlink{class_graph}{Graph}} \&gh)
+\begin{DoxyCompactList}\small\item\em Função que lê os voos do ficheiro \textquotesingle{}flights.\+csv\textquotesingle{} e os guarda no grafo de voos Complexidade\+: O(n) onde n é o número de voos. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, int $>$ \mbox{\hyperlink{class_gestor_a488f1064b1f6688a454f2bf895f41635}{get\+Airports\+\_\+\+Codes}} () const
+\begin{DoxyCompactList}\small\item\em Complexidade\+: O(1) Getter. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ int, \mbox{\hyperlink{class_airport}{Airport}} $>$ \mbox{\hyperlink{class_gestor_ad95d23fa8ad56e74dda6c3ed383b3638}{get\+Airports}} () const
+\begin{DoxyCompactList}\small\item\em Complexidade\+: O(1) Getter. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ pair$<$ double, double $>$, int, \mbox{\hyperlink{structhashpair}{hashpair}} $>$ \mbox{\hyperlink{class_gestor_a346040381d9717e41c1e6a01cabf11ab}{get\+Airports\+\_\+\+Coords}} () const
+\begin{DoxyCompactList}\small\item\em Complexidade\+: O(1) Getter. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, unordered\+\_\+set$<$ int $>$ $>$ \mbox{\hyperlink{class_gestor_af96c3f8e07cecaf868b2ba2e26b66114}{get\+Airports\+\_\+\+Airlines}} () const
+\begin{DoxyCompactList}\small\item\em Complexidade\+: O(1) Getter. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ pair$<$ string, string $>$, string, \mbox{\hyperlink{structhashpair__s}{hashpair\+\_\+s}} $>$ \mbox{\hyperlink{class_gestor_a9f74d402c66ca5e06f91f9c80f57d9eb}{get\+Arrival\+\_\+\+Departure\+\_\+\+Airline}} () const
+\begin{DoxyCompactList}\small\item\em Complexidade\+: O(1) Getter. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, int $>$ \mbox{\hyperlink{class_gestor_ad78130b04a334213b0f78bc4a43cc915}{get\+Airlines\+\_\+\+Codes}} () const
+\begin{DoxyCompactList}\small\item\em Complexidade\+: O(1) Getter. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ int, \mbox{\hyperlink{class_airline}{Airline}} $>$ \mbox{\hyperlink{class_gestor_a892a306b693d163274d4e9c1ed83320e}{get\+Airlines}} () const
+\begin{DoxyCompactList}\small\item\em Complexidade\+: O(1) Getter. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, vector$<$ int $>$ $>$ \mbox{\hyperlink{class_gestor_afd87136b3aedca0539399838645a8b50}{get\+Cities\+\_\+\+Airports}} () const
+\begin{DoxyCompactList}\small\item\em Complexidade\+: O(1) Getter. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, vector$<$ int $>$ $>$ \mbox{\hyperlink{class_gestor_ad89789ddd50639b1689fbc05267c6bcf}{get\+Countries\+\_\+\+Airports}} () const
+\begin{DoxyCompactList}\small\item\em Complexidade\+: O(1) Getter. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, vector$<$ int $>$ $>$ \mbox{\hyperlink{class_gestor_aef529f87c5c4ffdcbdb5932c330b92ef}{get\+Airlines\+\_\+\+Airports}} () const
+\begin{DoxyCompactList}\small\item\em Complexidade\+: O(1) Getter. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, unordered\+\_\+set$<$ string $>$ $>$ \mbox{\hyperlink{class_gestor_a3eaf3cf00870cf3a736456411cc016be}{get\+Country\+\_\+\+Cities}} () const
+\begin{DoxyCompactList}\small\item\em Complexidade\+: O(1) Getter. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ int, pair$<$ string, string $>$ $>$ \mbox{\hyperlink{class_gestor_ad4f95d4c848773c9ef1cd7215d9ddbfb}{get\+Id\+\_\+\+Country\+\_\+\+City}} () const
+\begin{DoxyCompactList}\small\item\em Complexidade\+: O(1) Getter. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ pair$<$ string, string $>$, vector$<$ int $>$, \mbox{\hyperlink{structhashpair__s}{hashpair\+\_\+s}} $>$ \mbox{\hyperlink{class_gestor_ac46b5414215574618998cdbfac680852}{get\+Country\+\_\+\+City\+\_\+\+Airports}} () const
+\begin{DoxyCompactList}\small\item\em Complexidade\+: O(1) Getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gestor_a3d47b6f028e380c1e3c0d319d0fdae31}\label{class_gestor_a3d47b6f028e380c1e3c0d319d0fdae31}} 
+\index{Gestor@{Gestor}!Gestor\_Flights@{Gestor\_Flights}}
+\index{Gestor\_Flights@{Gestor\_Flights}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{Gestor\_Flights()}{Gestor\_Flights()}}
+{\footnotesize\ttfamily void Gestor\+::\+Gestor\+\_\+\+Flights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph}{Graph}} \&}]{gh }\end{DoxyParamCaption})}
+
+
+
+Função que lê os voos do ficheiro \textquotesingle{}flights.\+csv\textquotesingle{} e os guarda no grafo de voos Complexidade\+: O(n) onde n é o número de voos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aux} & Grafo de voos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gestor_a892a306b693d163274d4e9c1ed83320e}\label{class_gestor_a892a306b693d163274d4e9c1ed83320e}} 
+\index{Gestor@{Gestor}!getAirlines@{getAirlines}}
+\index{getAirlines@{getAirlines}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getAirlines()}{getAirlines()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ int, \mbox{\hyperlink{class_airline}{Airline}} $>$ Gestor\+::get\+Airlines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Complexidade\+: O(1) Getter. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map que associa o índice de uma companhia aérea ao seu objeto Companhia 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_aef529f87c5c4ffdcbdb5932c330b92ef}\label{class_gestor_aef529f87c5c4ffdcbdb5932c330b92ef}} 
+\index{Gestor@{Gestor}!getAirlines\_Airports@{getAirlines\_Airports}}
+\index{getAirlines\_Airports@{getAirlines\_Airports}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getAirlines\_Airports()}{getAirlines\_Airports()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, vector$<$ int $>$ $>$ Gestor\+::get\+Airlines\+\_\+\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Complexidade\+: O(1) Getter. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map que associa o código de uma companhia aérea ao vetor de índices dos aeroportos que a mesma serve 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_ad78130b04a334213b0f78bc4a43cc915}\label{class_gestor_ad78130b04a334213b0f78bc4a43cc915}} 
+\index{Gestor@{Gestor}!getAirlines\_Codes@{getAirlines\_Codes}}
+\index{getAirlines\_Codes@{getAirlines\_Codes}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getAirlines\_Codes()}{getAirlines\_Codes()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, int $>$ Gestor\+::get\+Airlines\+\_\+\+Codes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Complexidade\+: O(1) Getter. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map que associa o código de uma companhia aérea ao seu índice no vetor de companhias aéreas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_ad95d23fa8ad56e74dda6c3ed383b3638}\label{class_gestor_ad95d23fa8ad56e74dda6c3ed383b3638}} 
+\index{Gestor@{Gestor}!getAirports@{getAirports}}
+\index{getAirports@{getAirports}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getAirports()}{getAirports()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ int, \mbox{\hyperlink{class_airport}{Airport}} $>$ Gestor\+::get\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Complexidade\+: O(1) Getter. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map que associa o índice de um aeroporto ao seu objeto Aeroporto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_af96c3f8e07cecaf868b2ba2e26b66114}\label{class_gestor_af96c3f8e07cecaf868b2ba2e26b66114}} 
+\index{Gestor@{Gestor}!getAirports\_Airlines@{getAirports\_Airlines}}
+\index{getAirports\_Airlines@{getAirports\_Airlines}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getAirports\_Airlines()}{getAirports\_Airlines()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, unordered\+\_\+set$<$ int $>$ $>$ Gestor\+::get\+Airports\+\_\+\+Airlines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Complexidade\+: O(1) Getter. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map que associa o código de uma companhia aérea ao conjunto de índices dos aeroportos que a mesma serve 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_a488f1064b1f6688a454f2bf895f41635}\label{class_gestor_a488f1064b1f6688a454f2bf895f41635}} 
+\index{Gestor@{Gestor}!getAirports\_Codes@{getAirports\_Codes}}
+\index{getAirports\_Codes@{getAirports\_Codes}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getAirports\_Codes()}{getAirports\_Codes()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, int $>$ Gestor\+::get\+Airports\+\_\+\+Codes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Complexidade\+: O(1) Getter. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map que associa o código de um aeroporto ao seu índice no vetor de aeroportos 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_a346040381d9717e41c1e6a01cabf11ab}\label{class_gestor_a346040381d9717e41c1e6a01cabf11ab}} 
+\index{Gestor@{Gestor}!getAirports\_Coords@{getAirports\_Coords}}
+\index{getAirports\_Coords@{getAirports\_Coords}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getAirports\_Coords()}{getAirports\_Coords()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ pair$<$ double, double $>$, int, \mbox{\hyperlink{structhashpair}{hashpair}} $>$ Gestor\+::get\+Airports\+\_\+\+Coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Complexidade\+: O(1) Getter. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map que associa as coordenadas de um aeroporto ao seu índice no vetor de aeroportos 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_a9f74d402c66ca5e06f91f9c80f57d9eb}\label{class_gestor_a9f74d402c66ca5e06f91f9c80f57d9eb}} 
+\index{Gestor@{Gestor}!getArrival\_Departure\_Airline@{getArrival\_Departure\_Airline}}
+\index{getArrival\_Departure\_Airline@{getArrival\_Departure\_Airline}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getArrival\_Departure\_Airline()}{getArrival\_Departure\_Airline()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ pair$<$ string, string $>$, string, \mbox{\hyperlink{structhashpair__s}{hashpair\+\_\+s}} $>$ Gestor\+::get\+Arrival\+\_\+\+Departure\+\_\+\+Airline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Complexidade\+: O(1) Getter. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map que associa o par de códigos de aeroportos de partida e chegada a um código de companhia aérea 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_afd87136b3aedca0539399838645a8b50}\label{class_gestor_afd87136b3aedca0539399838645a8b50}} 
+\index{Gestor@{Gestor}!getCities\_Airports@{getCities\_Airports}}
+\index{getCities\_Airports@{getCities\_Airports}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getCities\_Airports()}{getCities\_Airports()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, vector$<$ int $>$ $>$ Gestor\+::get\+Cities\+\_\+\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Complexidade\+: O(1) Getter. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map que associa o nome de uma cidade ao vetor de índices dos aeroportos dessa cidade 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_ad89789ddd50639b1689fbc05267c6bcf}\label{class_gestor_ad89789ddd50639b1689fbc05267c6bcf}} 
+\index{Gestor@{Gestor}!getCountries\_Airports@{getCountries\_Airports}}
+\index{getCountries\_Airports@{getCountries\_Airports}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getCountries\_Airports()}{getCountries\_Airports()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, vector$<$ int $>$ $>$ Gestor\+::get\+Countries\+\_\+\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Complexidade\+: O(1) Getter. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map que associa o nome de um país ao vetor de índices dos aeroportos desse país 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_a3eaf3cf00870cf3a736456411cc016be}\label{class_gestor_a3eaf3cf00870cf3a736456411cc016be}} 
+\index{Gestor@{Gestor}!getCountry\_Cities@{getCountry\_Cities}}
+\index{getCountry\_Cities@{getCountry\_Cities}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getCountry\_Cities()}{getCountry\_Cities()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, unordered\+\_\+set$<$ string $>$ $>$ Gestor\+::get\+Country\+\_\+\+Cities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Complexidade\+: O(1) Getter. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map que associa o nome de um país ao conjunto de nomes das cidades desse país 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_ac46b5414215574618998cdbfac680852}\label{class_gestor_ac46b5414215574618998cdbfac680852}} 
+\index{Gestor@{Gestor}!getCountry\_City\_Airports@{getCountry\_City\_Airports}}
+\index{getCountry\_City\_Airports@{getCountry\_City\_Airports}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getCountry\_City\_Airports()}{getCountry\_City\_Airports()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ pair$<$ string, string $>$, vector$<$ int $>$, \mbox{\hyperlink{structhashpair__s}{hashpair\+\_\+s}} $>$ Gestor\+::get\+Country\+\_\+\+City\+\_\+\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Complexidade\+: O(1) Getter. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map que associa o par de nomes do país e da cidade de um aeroporto ao vetor de índices dos aeroportos dessa cidade desse país 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_ad4f95d4c848773c9ef1cd7215d9ddbfb}\label{class_gestor_ad4f95d4c848773c9ef1cd7215d9ddbfb}} 
+\index{Gestor@{Gestor}!getId\_Country\_City@{getId\_Country\_City}}
+\index{getId\_Country\_City@{getId\_Country\_City}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getId\_Country\_City()}{getId\_Country\_City()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ int, pair$<$ string, string $>$ $>$ Gestor\+::get\+Id\+\_\+\+Country\+\_\+\+City (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Complexidade\+: O(1) Getter. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map que associa o índice de um aeroporto ao par de nomes do país e da cidade desse aeroporto 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_gestor_8h}{Gestor.\+h}}\item 
+\mbox{\hyperlink{_gestor_8cpp}{Gestor.\+cpp}}\end{DoxyCompactItemize}

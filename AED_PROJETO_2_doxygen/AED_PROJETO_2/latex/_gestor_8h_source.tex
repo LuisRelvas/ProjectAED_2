@@ -1,0 +1,80 @@
+\hypertarget{_gestor_8h_source}{}\doxysection{Gestor.\+h}
+\mbox{\hyperlink{_gestor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef AED\_PROJETO\_2\_GESTOR\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define AED\_PROJETO\_2\_GESTOR\_H}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_airport_8h}{Airport.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_airline_8h}{Airline.h}}"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_distances_8h}{Distances.h}}"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_graph_8h}{Graph.h}}"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{24 \textcolor{keyword}{struct }\mbox{\hyperlink{structhashpair}{hashpair}}\{}
+\DoxyCodeLine{25     \textcolor{keywordtype}{size\_t} operator()(\textcolor{keyword}{const} pair<double, double> \&p)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{26         \textcolor{keyword}{auto} hash1 = hash<double>\{\}(p.first);}
+\DoxyCodeLine{27         \textcolor{keyword}{auto} hash2 = hash<double>\{\}(p.second);}
+\DoxyCodeLine{28         \textcolor{keywordflow}{return} hash1 \string^ hash2;}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{37 \textcolor{keyword}{struct }\mbox{\hyperlink{structhashpair__s}{hashpair\_s}}\{}
+\DoxyCodeLine{38     \textcolor{keywordtype}{size\_t} operator()(\textcolor{keyword}{const} pair<string, string> \&p)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{39         \textcolor{keyword}{auto} hash1 = hash<string>\{\}(p.first);}
+\DoxyCodeLine{40         \textcolor{keyword}{auto} hash2 = hash<string>\{\}(p.second);}
+\DoxyCodeLine{41         \textcolor{keywordflow}{return} hash1 \string^ hash2;}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43 \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{class }\mbox{\hyperlink{class_gestor}{Gestor}} \{}
+\DoxyCodeLine{46     unordered\_map<string, int> Airports\_Codes;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     unordered\_map<int, Airport> Airports;}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     unordered\_map<pair<double, double>, int, \mbox{\hyperlink{structhashpair}{hashpair}}> Airports\_Coords;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     unordered\_map<string, unordered\_set<int>> Airports\_Airlines;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     unordered\_map<pair<string, string>, string, \mbox{\hyperlink{structhashpair__s}{hashpair\_s}}> Arrival\_Departure\_Airline;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     unordered\_map<string, int> Airlines\_Codes;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     unordered\_map<int, Airline> Airlines;}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     unordered\_map<string, vector<int>> Cities\_Airports;}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     unordered\_map<string, vector<int>> Countries\_Airports;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     unordered\_map<string, vector<int>> Airlines\_Airports;}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     unordered\_map<string, unordered\_set<string>> Country\_Cities;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     unordered\_map<int, pair<string,string>> Id\_Country\_City;}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     unordered\_map<pair<string,string>, vector<int>, \mbox{\hyperlink{structhashpair__s}{hashpair\_s}}> Country\_City\_Airports;}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{keyword}{public}:}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_ac5407660e04225635be3e71fa1d51247}{Gestor\_Airports}}();}
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_a0003b9fad20add3ad5861d00c45747af}{Gestor\_Airlines}}();}
+\DoxyCodeLine{93     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_a3d47b6f028e380c1e3c0d319d0fdae31}{Gestor\_Flights}}(\mbox{\hyperlink{class_graph}{Graph}} \&gh);}
+\DoxyCodeLine{100     unordered\_map<string, int> \mbox{\hyperlink{class_gestor_a488f1064b1f6688a454f2bf895f41635}{getAirports\_Codes}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{107     unordered\_map<int, Airport> \mbox{\hyperlink{class_gestor_ad95d23fa8ad56e74dda6c3ed383b3638}{getAirports}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{114     unordered\_map<pair<double, double>, int, \mbox{\hyperlink{structhashpair}{hashpair}}> \mbox{\hyperlink{class_gestor_a346040381d9717e41c1e6a01cabf11ab}{getAirports\_Coords}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{121     unordered\_map<string, unordered\_set<int>> \mbox{\hyperlink{class_gestor_af96c3f8e07cecaf868b2ba2e26b66114}{getAirports\_Airlines}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{128     unordered\_map<pair<string, string>, string, \mbox{\hyperlink{structhashpair__s}{hashpair\_s}}> \mbox{\hyperlink{class_gestor_a9f74d402c66ca5e06f91f9c80f57d9eb}{getArrival\_Departure\_Airline}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{135     unordered\_map<string, int> \mbox{\hyperlink{class_gestor_ad78130b04a334213b0f78bc4a43cc915}{getAirlines\_Codes}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{142     unordered\_map<int, Airline> \mbox{\hyperlink{class_gestor_a892a306b693d163274d4e9c1ed83320e}{getAirlines}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{150     unordered\_map<string, vector<int>> \mbox{\hyperlink{class_gestor_afd87136b3aedca0539399838645a8b50}{getCities\_Airports}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{157     unordered\_map<string, vector<int>> \mbox{\hyperlink{class_gestor_ad89789ddd50639b1689fbc05267c6bcf}{getCountries\_Airports}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{164     unordered\_map<string, vector<int>> \mbox{\hyperlink{class_gestor_aef529f87c5c4ffdcbdb5932c330b92ef}{getAirlines\_Airports}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{171     unordered\_map<string, unordered\_set<string>> \mbox{\hyperlink{class_gestor_a3eaf3cf00870cf3a736456411cc016be}{getCountry\_Cities}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{178     unordered\_map<int, pair<string,string>> \mbox{\hyperlink{class_gestor_ad4f95d4c848773c9ef1cd7215d9ddbfb}{getId\_Country\_City}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{185     unordered\_map<pair<string,string>, vector<int>, \mbox{\hyperlink{structhashpair__s}{hashpair\_s}}> \mbox{\hyperlink{class_gestor_ac46b5414215574618998cdbfac680852}{getCountry\_City\_Airports}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 \};}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//AED\_PROJETO\_2\_GESTOR\_H}}
+
+\end{DoxyCode}
